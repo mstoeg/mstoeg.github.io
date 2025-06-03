@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yoga Special - Yin Yoga</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      background: #fffaf7;
+      color: #2c2c2c;
+    }
+    header {
+      background-color: #f4dfd8;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    nav {
+      display: flex;
+      gap: 2rem;
+      font-weight: bold;
+    }
+    nav a {
+      color: #2c2c2c;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #c0a24f;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .highlight {
+      color: #c0a24f;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .box {
+      background-color: #f4dfd8;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .image {
+      width: 100%;
+      border-radius: 1rem;
+      margin-top: 1rem;
+    }
+    .footer {
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+    .leaf {
+      color: #c0a24f;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        display: none;
+        background-color: #f4dfd8;
+        width: 100%;
+      }
+      nav.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('show');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div><strong>Yin Yoga</strong></div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav>
+      <a href="#workshops">Workshops</a>
+      <a href="#retreats">Retreats</a>
+      <a href="#termine">Termine</a>
+      <a href="#anmeldung">Anmeldung</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+  <div class="container">
+    <p class="highlight">Yoga Special</p>
+    <h1>YIN YOGA</h1>
+    <div class="box">
+      Yin Yoga ist eine ruhige, meditative Praxis, die das Fasziengewebe anspricht und Spannungen löst.
+      Sie hilft dir, achtsam zu entspannen und innerlich zur Ruhe zu kommen – eine wertvolle Ergänzung zu einem aktiven Alltag.
+    </div>
+
+    <div class="box">
+      <strong>Mitzubringen:</strong><br />
+      Yogablöcke, Decke, 1-2 Bolster, Yogagurt (alternativ: feste Decke, Polster, Gürtel)
+    </div>
+
+    <div class="box" id="termine">
+      <strong>Dienstag, Mühlheim</strong><br />
+      10.06., 18:00-19:30<br />
+      25€
+    </div>
+
+    <div class="box" id="workshops">
+      <h2>Workshops</h2>
+      <p>Unsere Yin Yoga Workshops bieten dir die Möglichkeit, gezielt in bestimmte Themen einzutauchen – z.B. Entspannung, Loslassen oder energetisches Gleichgewicht. Sie finden in kleinen Gruppen statt und sind für alle Erfahrungslevel geeignet.</p>
+    </div>
+
+    <div class="box" id="retreats">
+      <h2>Retreats</h2>
+      <p>Gönne dir eine Auszeit! Unsere Retreats verbinden intensive Yin Yoga Sessions mit Erholung in der Natur, gesundem Essen und Zeit für dich. Perfekt, um neue Energie zu tanken und nachhaltig zur Ruhe zu kommen.</p>
+    </div>
+
+    <div class="box" id="anmeldung">
+      <h2>Anmeldung</h2>
+      <p>Du möchtest teilnehmen? Melde dich telefonisch oder per Nachricht bei Sophie Fellhofer unter 0670/7743363 an. Die Teilnehmerzahl ist begrenzt.</p>
+    </div>
+
+    <img class="image" src="/mnt/data/WhatsApp Image 2025-05-24 at 17.18.35.jpeg" alt="Yin Yoga Pose" />
+
+    <div class="footer" id="kontakt">
+      <p class="leaf">Offen für alle, keine Vorkenntnisse notwendig</p>
+      Anmeldung: Sophie Fellhofer, 0670/7743363
+    </div>
+  </div>
+</body>
+</html>
+
