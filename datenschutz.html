@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutz – Yoga mit Sophie</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="design-bg1 design-bg-bottom-left"></div>
+  <div class="design-bg2"></div>
+  <header>
+    <div class="header-logo-title">
+      <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="header-logo" />
+      <span class="header-title">Yoga mit Sophie</span>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav>
+      <a href="index.html">Kurse</a>
+      <a href="workshops.html">Workshops</a>
+      <a href="retreats.html">Retreats</a>
+      <a href="firmen.html">Firmen/Personal Yoga</a>
+      <a href="about.html">About me</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1 style="font-weight: normal;">Datenschutzerklärung</h1>
+    <div class="kurse-card" style="max-width:700px;margin:auto;">
+      <h2 style="font-size:1.15rem; color:#c0a24f;">1. Allgemeines</h2>
+      <p>Der Schutz Ihrer persönlichen Daten ist mir, Sophie Fellhofer, ein besonderes Anliegen. Ich verarbeite Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003). In dieser Datenschutzerklärung informiere ich Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen dieser Website.</p>
+      <h2 style="font-size:1.15rem; color:#c0a24f;">2. Kontaktaufnahme</h2>
+      <p>Wenn Sie per Formular auf dieser Website oder per E-Mail Kontakt mit mir aufnehmen, werden Ihre angegebenen Daten (Name, E-Mail-Adresse, Nachricht) zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen sechs Monate gespeichert. Diese Daten werden ohne Ihre ausdrückliche Einwilligung nicht weitergegeben.</p>
+      <h2 style="font-size:1.15rem; color:#c0a24f;">3. Server-Logfiles</h2>
+      <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Logfiles, die Ihr Browser automatisch übermittelt. Dies sind insbesondere: Browsertyp und Browserversion, verwendetes Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage und IP-Adresse. Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
+      <h2 style="font-size:1.15rem; color:#c0a24f;">4. Cookies</h2>
+      <p>Diese Website verwendet keine Cookies.</p>
+      <h2 style="font-size:1.15rem; color:#c0a24f;">5. Ihre Rechte</h2>
+      <p>Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch zu. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind, können Sie sich bei der Aufsichtsbehörde beschweren. In Österreich ist dies die Datenschutzbehörde.</p>
+      <h2 style="font-size:1.15rem; color:#c0a24f;">6. Verantwortliche Stelle</h2>
+      <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>
+      <strong>Yoga mit Sophie</strong><br>
+      Sophie Fellhofer<br>
+      Altheim, Österreich<br>
+      E-Mail: sophie.fellhofer@aon.at<br>
+      Telefon: 0670 7743363</p>
+      <h2 style="font-size:1.15rem; color:#c0a24f;">7. Änderungen dieser Datenschutzerklärung</h2>
+      <p>Ich behalte mir vor, diese Datenschutzerklärung bei Bedarf zu aktualisieren, um sie an geänderte Rechtslagen oder bei Änderungen des Dienstes sowie der Datenverarbeitung anzupassen. Die jeweils aktuelle Version finden Sie stets auf dieser Website.</p>
+      <h2 style="font-size:1.15rem; color:#c0a24f;">8. Hosting</h2>
+      <p>Diese Website wird über die Plattform <a href="https://github.com" target="_blank">GitHub Pages</a> gehostet, einem Dienst der GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Website werden Verbindungsdaten (wie IP-Adresse, Browserinformationen, Zeitpunkt des Zugriffs) an Server von GitHub in den USA übertragen und dort verarbeitet. Weitere Informationen zur Datenverarbeitung durch GitHub finden Sie in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement" target="_blank">GitHub-Datenschutzerklärung</a>. Durch die Nutzung dieser Website erklären Sie sich mit der Verarbeitung Ihrer Daten durch GitHub einverstanden. Es kann nicht ausgeschlossen werden, dass US-Behörden auf diese Daten zugreifen.</p>
+      <p>Alle Inhalte dieser Website, insbesondere Texte, Fotos und Grafiken, sind urheberrechtlich geschützt. Die Verwendung, Vervielfältigung oder Weitergabe der Bilder ist ohne ausdrückliche schriftliche Zustimmung von Sophie Fellhofer nicht gestattet.</p>
+      <p>Stand: Juni 2025</p>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <a href="impressum.html">Impressum</a> &nbsp;|&nbsp; <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-bottom: 0;
+    }
+    .container {
+      flex: 1 0 auto;
+    }
+    .site-footer {
+      width: 100vw;
+      background: linear-gradient(90deg, #f4dfd8 60%, #fffaf7 100%);
+      border-top: 2px solid #e5d3c6;
+      margin-top: 3rem;
+      padding: 2.2rem 0 1.2rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80px;
+      box-sizing: border-box;
+    }
+    .footer-content {
+      font-size: 1.08rem;
+      color: #7a6a4f;
+      letter-spacing: 0.01em;
+      text-align: center;
+    }
+    .footer-content a {
+      color: #c0a24f;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .footer-content a:hover {
+      color: #a08a3a;
+    }
+    @media (max-width: 600px) {
+      .site-footer {
+        padding: 1.2rem 0 0.7rem 0;
+        min-height: 60px;
+      }
+      .footer-content {
+        font-size: 0.98rem;
+      }
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

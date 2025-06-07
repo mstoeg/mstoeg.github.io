@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum – Yoga mit Sophie</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="design-bg1 design-bg-bottom-left"></div>
+  <div class="design-bg2"></div>
+  <header>
+    <div class="header-logo-title">
+      <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="header-logo" />
+      <span class="header-title">Yoga mit Sophie</span>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav>
+      <a href="index.html">Kurse</a>
+      <a href="workshops.html">Workshops</a>
+      <a href="retreats.html">Retreats</a>
+      <a href="firmen.html">Firmen/Personal Yoga</a>
+      <a href="about.html">About me</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1 style="font-weight: normal;">Impressum</h1>
+    <div class="kurse-card" style="max-width:500px;margin:auto;">
+      <p><strong>Yoga mit Sophie</strong><br>
+      Sophie Fellhofer<br>
+      Altheim, Österreich<br>
+      E-Mail: sophie.fellhofer@aon.at<br>
+      Telefon: 0670 7743363<br>
+      Gerichtsstand: Ried im Innkreis</p>
+      <p>Inhaltlich verantwortlich: Sophie Fellhofer<br>
+      Plattform der EU-Kommission zur Online-Streitbeilegung: <a href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a></p>
+      <p>Alle Inhalte dieser Website sind urheberrechtlich geschützt.</p>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <a href="impressum.html">Impressum</a> &nbsp;|&nbsp; <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-bottom: 0;
+    }
+    .container {
+      flex: 1 0 auto;
+    }
+    .site-footer {
+      width: 100vw;
+      background: linear-gradient(90deg, #f4dfd8 60%, #fffaf7 100%);
+      border-top: 2px solid #e5d3c6;
+      margin-top: 3rem;
+      padding: 2.2rem 0 1.2rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80px;
+      box-sizing: border-box;
+    }
+    .footer-content {
+      font-size: 1.08rem;
+      color: #7a6a4f;
+      letter-spacing: 0.01em;
+      text-align: center;
+    }
+    .footer-content a {
+      color: #c0a24f;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .footer-content a:hover {
+      color: #a08a3a;
+    }
+    @media (max-width: 600px) {
+      .site-footer {
+        padding: 1.2rem 0 0.7rem 0;
+        min-height: 60px;
+      }
+      .footer-content {
+        font-size: 0.98rem;
+      }
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

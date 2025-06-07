@@ -7,8 +7,13 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <div class="design-bg1 design-bg-bottom-left"></div>
+    <div class="design-bg2"></div>
   <header>
-    <div><strong>Yoga mit Sophie</strong></div>
+    <div class="header-logo-title">
+      <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="header-logo" />
+      <span class="header-title">Yoga mit Sophie</span>
+    </div>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
       <a href="index.html">Kurse</a>
@@ -20,15 +25,100 @@
     </nav>
   </header>
   <div class="container">
-    <h1>About me</h1>
-    <div class="box">
-      <p>Mein Name ist Sophie Fellhofer. Ich bin zertifizierte Yin Yoga Lehrerin und freue mich, dich auf deinem Yogaweg zu begleiten.</p>
+    <h1 style="font-weight: normal;">About me</h1>
+    <div class="kurse-flex">
+      <div class="kurse-info">
+        <div class="kurse-card">
+          <img src="images/about/aboutme.jpeg" alt="Sophie Fellhofer Portrait" class="aboutme-img" />
+          <p>
+            Hallo, ich bin Sophie, 26 Jahre alt, lebe in Altheim und arbeite hauptberuflich als Software-Entwicklerin.
+          </p>
+          <p>
+            Meine Reise zum Yoga begann 2019, als ich mich nach einer langen Krankheitsphase auf die Suche nach Wegen machte, wieder in Bewegung zu kommen und meinem Körper sowie meiner Seele etwas Gutes zu tun.
+          </p>
+          <p>
+            Was als persönliche Unterstützung begann, entwickelte sich schnell zu einer tiefen Faszination: Ich wollte mehr über die Hintergründe des Yoga erfahren – über das Wie und Warum hinter jeder Praxis. So absolvierte ich meine erste Ausbildung und ließ bald weitere folgen. Geprägt durch meine Ausbildungen und eigene Praxis wurde Yoga für mich zu einem wertvollen Begleiter, der mir nicht nur körperlich, sondern besonders auch mental und emotional neue Kraft schenkte.
+          </p>
+          <p>
+            Seit einigen Jahren darf ich dieses Wissen nun weitergeben und unterrichte mit großer Freude. Mein Unterricht ist geprägt von Achtsamkeit, Authentizität und dem Wunsch, anderen ebenfalls einen Zugang zu dieser heilsamen Praxis zu ermöglichen.
+          </p>
+        </div>
+        <div class="kurse-card" style="margin-top:1.5rem;">
+          <h2 style="font-size:1.15rem; font-weight:normal; color:#c0a24f; margin-top:0; margin-bottom:0.7rem;">Ausbildungen</h2>
+          <ul style="margin-top:0; margin-bottom:0;">
+            <li>2021: Yoga & Qigong Coach, 200 Stunden, Yogo</li>
+            <li>2022: Teachers Training Course in Yoga Education, 200 Stunden, The Yoga Institute</li>
+            <li>2023: Yogalehrerausbildung, 200 Stunden, NowYoga Academy</li>
+            <li>2025: Yogalehrerausbildung, 300 Stunden, NowYoga Academy</li>
+          </ul>
+          <div class="aboutme-certificates-row">
+            <img src="images/about/certificate.JPG" alt="Zertifikat Yoga Ausbildung" class="aboutme-certificate" />
+            <img src="images/about/training.JPG" alt="Yoga Training Bild" class="aboutme-certificate" />
+            <img src="images/about/certificate2.JPG" alt="Zertifikat Yoga Ausbildung 2" class="aboutme-certificate" />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <a href="impressum.html">Impressum</a> &nbsp;|&nbsp; <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-bottom: 0;
+    }
+    .container {
+      flex: 1 0 auto;
+    }
+    .site-footer {
+      width: 100%;
+      background: linear-gradient(90deg, #f4dfd8 60%, #fffaf7 100%);
+      border-top: 2px solid #e5d3c6;
+      padding: 2.2rem 0 1.2rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80px;
+      box-sizing: border-box;
+      z-index: 100;
+    }
+    .footer-content {
+      font-size: 1.08rem;
+      color: #7a6a4f;
+      letter-spacing: 0.01em;
+      text-align: center;
+    }
+    .footer-content a {
+      color: #c0a24f;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .footer-content a:hover {
+      color: #a08a3a;
+    }
+    @media (max-width: 600px) {
+      .site-footer {
+        padding: 1.2rem 0 0.7rem 0;
+        min-height: 60px;
+      }
+      .footer-content {
+        font-size: 0.98rem;
+      }
+    }
+  </style>
   <script>
     function toggleMenu() {
-      const nav = document.querySelector('header nav');
-      nav.classList.toggle('active');
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('show');
     }
   </script>
 </body>

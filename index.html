@@ -13,11 +13,16 @@
   </script>
 </head>
 <body>
+    <div class="design-bg1 design-bg-bottom-left"></div>
+    <div class="design-bg2"></div>
   <header>
-    <div><strong>Yoga mit Sophie</strong></div>
+    <div class="header-logo-title">
+      <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="header-logo" />
+      <span class="header-title">Yoga mit Sophie</span>
+    </div>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
-      <a href="kurse.html">Kurse</a>
+      <a href="index.html">Kurse</a>
       <a href="workshops.html">Workshops</a>
       <a href="retreats.html">Retreats</a>
       <a href="firmen.html">Firmen/Personal Yoga</a>
@@ -26,74 +31,135 @@
     </nav>
   </header>
   <div class="container">
-    <h1>Kurse</h1>
-    <div class="slideshow-container">
-      <div class="slide fade">
-        <img src="images/promote1.jpeg" alt="Yoga Bild 1" class="slideshow-image">
+    <h1 style="font-weight: normal;">Wöchentliche Kurse</h1>
+    <div class="kurse-flex">
+      <div class="kurse-info">
+        <div class="kurse-card">
+          <strong>Montag – Altheim, Pfarrheim</strong><br />
+          Yoga + Qigong: 18:00–19:00<br />
+          Vinyasa/Power Yoga: 19:10–20:10<br />
+          <br />
+          <strong>Dienstag – Mühlheim, Volksschule</strong><br />
+          Yoga: 18:45–19:45<br />
+          <img src="images/logos/gesgemeinde.png" alt="Logo Gemeinde" style="max-width:120px; width:auto; margin:0rem 0 1rem 0; display:block; background:none; box-shadow:none; border-radius:0;" />
+          <strong>Mitzubringen:</strong> 
+          <br />
+          Yogamatte, bequeme Kleidung, evtl. Decke oder Kissen<br /><br />
+          Die Stunden finden wöchentlich statt und sind für Anfänger und Fortgeschrittene geeignet. Komm gerne zu einer Probestunde vorbei!
+          <br /><br />
+          <strong>Kosten:</strong><br />
+          10er-Karte: 120€<br />
+          5er-Karte: 65€<br />
+          Einzelstunde: 15€<br />
+          <br />
+          Offen für alle, keine Vorkenntnisse notwendig.
+        </div>
       </div>
-      <div class="slide fade">
-        <img src="images/promote2.jpeg" alt="Yoga Bild 2" class="slideshow-image">
+      <div class="kurse-gallery">
+        <div class="gallery-bg">
+          <div class="gallery-row">
+            <img src="images/promote6.jpeg" alt="Yoga Bild 1" class="gallery-img" onclick="openFullSize(this.src)">
+            <img src="images/promote7.jpeg" alt="Yoga Bild 2" class="gallery-img" onclick="openFullSize(this.src)">
+          </div>
+          <div class="gallery-row">
+            <img src="images/promote3.jpeg" alt="Yoga Bild 3" class="gallery-img" onclick="openFullSize(this.src)">
+            <img src="images/promote4.jpeg" alt="Yoga Bild 4" class="gallery-img" onclick="openFullSize(this.src)">
+          </div>
+        </div>
       </div>
-      <div class="slide fade">
-        <img src="images/promote3.jpeg" alt="Yoga Bild 3" class="slideshow-image">
-      </div>
-      <div class="slide fade">
-        <img src="images/promote4.jpeg" alt="Yoga Bild 4" class="slideshow-image">
-      </div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
+    <div class="kurse-info">
+      <div class="kurse-card" style="background:rgba(255, 120, 40, 0.13); border-left: 4px solid #c0a24f;">
+        <strong>Für alle, die ...</strong>
+        <ul style="margin-top:1rem; margin-bottom:0;">
+          <li>durch Asanas, Pranayama & Meditation gut ins Spüren kommen wollen,</li>
+          <li>eine Auszeit vom Alltag genießen möchten,</li>
+          <li>sowohl eine sanfte als auch intensive Praxis schätzen,</li>
+          <li>in entspannter Atmosphäre Energie tanken möchten,</li>
+          <li>eine regelmäßige Praxis wertschätzen oder</li>
+          <li>Yoga einfach mal ausprobieren möchten.</li>
+        </ul>
+      </div>
     </div>
-    <div class="box">
-      <p>Hier findest du alle aktuellen Yin Yoga Kurse. Für Anfänger und Fortgeschrittene geeignet. Melde dich gerne für eine Probestunde an!</p>
+    <div class="kurse-info">
+      <div class="kurse-card">
+        <strong>Yoga & Qigong</strong><br>
+        Sanfte Yoga-Asanas werden mit fließenden Qigong-Elementen kombiniert. Der Fokus liegt auf achtsamer Bewegung, bewusster Atmung, Meditation und tiefer Entspannung. Ideal, um Körper und Geist in Einklang zu bringen und neue Energie zu schöpfen.
+        <br><br>
+        <strong>Vinyasa/Power Yoga</strong><br>
+        Kraftvolle Hatha-Yoga-Haltungen werden mit dynamischen Vinyasa-Flows verbunden. Die Stunde endet mit ausgiebigem Dehnen und einer wohltuenden Entspannung. Für alle, die eine fordernde, aber zugleich ausgleichende Praxis suchen.
+      </div>
+    </div>
+    <div id="modal" class="modal" onclick="closeModal()">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modal-img">
     </div>
   </div>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <a href="impressum.html">Impressum</a> &nbsp;|&nbsp; <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .container {
+      flex: 1 0 auto;
+    }
+    .site-footer {
+      width: 100%;
+      background: linear-gradient(90deg, #f4dfd8 60%, #fffaf7 100%);
+      border-top: 2px solid #e5d3c6;
+      padding: 2.2rem 0 1.2rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80px;
+      box-sizing: border-box;
+      z-index: 100;
+    }
+    .footer-content {
+      font-size: 1.08rem;
+      color: #7a6a4f;
+      letter-spacing: 0.01em;
+      text-align: center;
+    }
+    .footer-content a {
+      color: #c0a24f;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .footer-content a:hover {
+      color: #a08a3a;
+    }
+    @media (max-width: 600px) {
+      .site-footer {
+        padding: 1.2rem 0 0.7rem 0;
+        min-height: 60px;
+      }
+      .footer-content {
+        font-size: 0.98rem;
+      }
+    }
+  </style>
   <script>
-    let slideIndex = 0;
-    let slideInterval;
-    showSlides();
-    function plusSlides(n) {
-      slideIndex += n;
-      showSlides();
-      resetInterval();
+    function openFullSize(src) {
+      var modal = document.getElementById('modal');
+      var modalImg = document.getElementById('modal-img');
+      modal.style.display = "flex";
+      modalImg.src = src;
     }
-    function currentSlide(n) {
-      slideIndex = n - 1;
-      showSlides();
-      resetInterval();
+    function closeModal() {
+      var modal = document.getElementById('modal');
+      modal.style.display = "none";
     }
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("slide");
-      let dots = document.getElementsByClassName("dot");
-      if (slideIndex >= slides.length) {slideIndex = 0}
-      if (slideIndex < 0) {slideIndex = slides.length - 1}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      if(slides.length > 0) {
-        slides[slideIndex].style.display = "block";
-        dots[slideIndex].className += " active";
-      }
-    }
-    function autoSlide() {
-      slideIndex++;
-      showSlides();
-    }
-    function resetInterval() {
-      clearInterval(slideInterval);
-      slideInterval = setInterval(autoSlide, 4000);
-    }
-    slideInterval = setInterval(autoSlide, 4000);
-    window.addEventListener('resize', showSlides);
   </script>
 </body>
 </html>

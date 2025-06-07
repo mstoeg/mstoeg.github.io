@@ -7,8 +7,13 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <div class="design-bg1 design-bg-bottom-left"></div>
+    <div class="design-bg2"></div>
   <header>
-    <div><strong>Yoga mit Sophie</strong></div>
+    <div class="header-logo-title">
+      <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="header-logo" />
+      <span class="header-title">Yoga mit Sophie</span>
+    </div>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
       <a href="index.html">Kurse</a>
@@ -20,15 +25,87 @@
     </nav>
   </header>
   <div class="container">
-    <h1>Firmen/Personal Yoga</h1>
-    <div class="box">
-      <p>Individuelle Yin Yoga Angebote für Firmen und Einzelpersonen. Fördere das Wohlbefinden und die Gesundheit in deinem Unternehmen oder privat.</p>
+    <h1 style="font-weight: normal;">Personal Yoga</h1>
+    <div class="kurse-flex">
+      <div class="kurse-info">
+        <div class="kurse-card">
+          <span class="highlight" style="font-size:1.2rem; color:#c0a24f;">Zeit für dich</span><br><br>
+          <strong>PERSONAL YOGA</strong><br><br>
+          Deine persönlichen Ziele werden im Vorfeld besprochen und gezielt berücksichtigt.<br><br>
+          Die volle Aufmerksamkeit liegt bei dir. So kann jede Übung in Ausführung und Intensität individuell angepasst und jederzeit korrigiert werden.<br><br>
+          Zeiten und Dauer für die Yogapraxis können individuell festgelegt werden.<br><br>
+          <strong>Asanas, Meditation, Pranayama</strong><br>
+          Somatisches Yoga<br>
+          Yin Yoga<br>
+          Passives Yoga (Nuad Yoga)<br>
+          60, 75, 90 Minuten<br><br>
+        </div>
+      </div>
     </div>
   </div>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <a href="impressum.html">Impressum</a> &nbsp;|&nbsp; <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-bottom: 0;
+    }
+    .container {
+      flex: 1 0 auto;
+    }
+    .site-footer {
+      width: 100vw;
+      background: linear-gradient(90deg, #f4dfd8 60%, #fffaf7 100%);
+      border-top: 2px solid #e5d3c6;
+      margin-top: 3rem;
+      padding: 2.2rem 0 1.2rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80px;
+      box-sizing: border-box;
+      /* position: fixed; entfernt */
+      /* left: 0; entfernt */
+      /* bottom: 0; entfernt */
+      /* z-index: 100; entfernt */
+    }
+    .footer-content {
+      font-size: 1.08rem;
+      color: #7a6a4f;
+      letter-spacing: 0.01em;
+      text-align: center;
+    }
+    .footer-content a {
+      color: #c0a24f;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .footer-content a:hover {
+      color: #a08a3a;
+    }
+    @media (max-width: 600px) {
+      .site-footer {
+        padding: 1.2rem 0 0.7rem 0;
+        min-height: 60px;
+      }
+      .footer-content {
+        font-size: 0.98rem;
+      }
+    }
+  </style>
   <script>
     function toggleMenu() {
-      const nav = document.querySelector('header nav');
-      nav.classList.toggle('active');
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('show');
     }
   </script>
 </body>

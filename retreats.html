@@ -7,8 +7,13 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <div class="design-bg1 design-bg-bottom-left"></div>
+    <div class="design-bg2"></div>
   <header>
-    <div><strong>Yoga mit Sophie</strong></div>
+    <div class="header-logo-title">
+      <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="header-logo" />
+      <span class="header-title">Yoga mit Sophie</span>
+    </div>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
       <a href="index.html">Kurse</a>
@@ -20,15 +25,113 @@
     </nav>
   </header>
   <div class="container">
-    <h1>Retreats</h1>
-    <div class="box">
-      <p>Hier findest du Informationen zu unseren Yin Yoga Retreats. Gönne dir eine Auszeit und tanke neue Energie in der Natur!</p>
+    <h1 style="font-weight: normal;">Yoga auf der Alm</h1>
+    <div class="kurse-flex">
+      <div class="kurse-info">
+        <div class="kurse-card">
+          Neben gemeinsamen Yoga-Asana Einheiten, Meditation und Atemübungen (Pranayama) erwarten euch Einblicke in die Yoga-Philosophie.<br><br>
+          Bei hochwertigem und sehr ausgiebigem Frühstück und Abendessen freue ich mich über den gemütlichen Austausch untereinander.<br><br>
+          Die Präaualm liegt auf 1808m in den Gasteiner Bergen und bietet den idealen Platz für wohltuende Tage.
+          <br><br>
+          <strong>Ort:</strong> Präaualm, Dorfgastein<br>
+          <strong>Termin 1:</strong> 12.08. – 14.08.2025<br>
+          <strong>Termin 2:</strong> 15.08. – 17.08.2025<br>
+          <strong>Treffpunkt:</strong> Präauweg 2, 5632 Dorfgastein, ca. 9 Uhr<br><br>
+          <strong>Kosten:</strong> 390€<br>
+          <span style="font-size:0.98em;">(davon: Kurskosten: 260€, Übernachtung + HP: 130€)</span><br><br>
+          6 – 10 Teilnehmer/-innen
+        </div>
+      </div>
+      <div class="kurse-gallery">
+        <div class="gallery-bg">
+          <div class="gallery-row">
+            <img src="images/alm/alm5.jpeg" alt="Yoga auf der Alm Bild 1" class="gallery-img" onclick="openFullSize(this.src)">
+            <img src="images/alm/alm6.jpeg" alt="Yoga auf der Alm Bild 2" class="gallery-img" onclick="openFullSize(this.src)">
+          </div>
+          <div class="gallery-row">
+            <img src="images/alm/alm1.jpeg" alt="Yoga auf der Alm Bild 3" class="gallery-img" onclick="openFullSize(this.src)">
+            <img src="images/alm/alm7.jpeg" alt="Yoga auf der Alm Bild 4" class="gallery-img" onclick="openFullSize(this.src)">
+          </div>
+          <div class="gallery-row">
+            <img src="images/alm/alm2.jpeg" alt="Yoga auf der Alm Bild 5" class="gallery-img" onclick="openFullSize(this.src)">
+            <img src="images/alm/alm4.jpeg" alt="Yoga auf der Alm Bild 6" class="gallery-img" onclick="openFullSize(this.src)">
+          </div>
+        </div>
+      </div>
+      <div id="modal" class="modal" onclick="closeModal()">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+      </div>
     </div>
   </div>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <a href="impressum.html">Impressum</a> &nbsp;|&nbsp; <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .container {
+      flex: 1 0 auto;
+    }
+    .site-footer {
+      width: 100%;
+      background: linear-gradient(90deg, #f4dfd8 60%, #fffaf7 100%);
+      border-top: 2px solid #e5d3c6;
+      padding: 2.2rem 0 1.2rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80px;
+      box-sizing: border-box;
+      z-index: 100;
+    }
+    .footer-content {
+      font-size: 1.08rem;
+      color: #7a6a4f;
+      letter-spacing: 0.01em;
+      text-align: center;
+    }
+    .footer-content a {
+      color: #c0a24f;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .footer-content a:hover {
+      color: #a08a3a;
+    }
+    @media (max-width: 600px) {
+      .site-footer {
+        padding: 1.2rem 0 0.7rem 0;
+        min-height: 60px;
+      }
+      .footer-content {
+        font-size: 0.98rem;
+      }
+    }
+  </style>
   <script>
     function toggleMenu() {
-      const nav = document.querySelector('header nav');
-      nav.classList.toggle('active');
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('show');
+    }
+    function openFullSize(src) {
+      var modal = document.getElementById('modal');
+      var modalImg = document.getElementById('modal-img');
+      modal.style.display = "flex";
+      modalImg.src = src;
+    }
+    function closeModal() {
+      var modal = document.getElementById('modal');
+      modal.style.display = "none";
     }
   </script>
 </body>
