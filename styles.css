@@ -1,4 +1,3 @@
-
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -65,17 +64,129 @@ h1 {
   font-weight: bold;
   font-size: 1.1rem;
 }
+/* Slideshow styles */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  margin: 2rem auto 2rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  background: #fff;
+}
+.slide {
+  display: none;
+}
+.slideshow-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: opacity 0.7s;
+  display: block;
+  margin: 0 auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #c0a24f;
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background: rgba(255,255,255,0.7);
+  transition: background 0.3s;
+  z-index: 2;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background: #f4dfd8;
+}
+.dot {
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  margin: 0 4px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+.active, .dot:hover {
+  background-color: #c0a24f;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@media (max-width: 900px) {
+  .container {
+    padding: 1rem;
+  }
+  .slideshow-image {
+    max-width: 100vw;
+    width: 100vw;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 0.5rem;
+  }
+  .slideshow-container {
+    max-width: 100vw;
+    border-radius: 0.5rem;
+  }
+}
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 0.5rem;
+  }
   nav {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
     display: none;
     background-color: #f4dfd8;
-    width: 100%;
+    padding: 1rem 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
   nav.show {
     display: flex;
   }
-  .menu-toggle {
-    display: block;
+  nav a {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #e5d3c6;
+  }
+  nav a:last-child {
+    border-bottom: none;
+  }
+  .container {
+    padding: 1rem 0.5rem;
   }
 }

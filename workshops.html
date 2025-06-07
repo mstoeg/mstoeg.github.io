@@ -9,8 +9,9 @@
 <body>
   <header>
     <div><strong>Yoga mit Sophie</strong></div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
-      <a href="kurse.html">Kurse</a>
+      <a href="index.html">Kurse</a>
       <a href="workshops.html">Workshops</a>
       <a href="retreats.html">Retreats</a>
       <a href="firmen.html">Firmen/Personal Yoga</a>
@@ -52,5 +53,11 @@
       Anmeldung: Sophie Fellhofer, 0670/7743363
     </div>
   </div>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('header nav');
+      nav.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
