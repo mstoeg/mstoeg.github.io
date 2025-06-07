@@ -7,8 +7,13 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <div class="design-bg1 design-bg-bottom-left"></div>
+    <div class="design-bg2"></div>
   <header>
-    <div><strong>Yoga mit Sophie</strong></div>
+    <div class="header-logo-title">
+      <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="header-logo" />
+      <span class="header-title">Yoga mit Sophie</span>
+    </div>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
       <a href="index.html">Kurse</a>
@@ -20,15 +25,28 @@
     </nav>
   </header>
   <div class="container">
-    <h1>Kontakt</h1>
-    <div class="box">
-      <p>Du hast Fragen oder möchtest dich anmelden? Kontaktiere mich gerne telefonisch oder per Nachricht:<br>Sophie Fellhofer, 0670/7743363</p>
+    <h1 style="font-weight: normal;">Kontakt</h1>
+    <div class="kurse-flex">
+      <div class="kurse-info">
+        <div class="kurse-card">
+          <p>Du hast Fragen oder möchtest dich anmelden? Kontaktiere mich gerne telefonisch oder per Nachricht:<br>Sophie Fellhofer, 0670/7743363</p>
+        </div>
+        <div class="kurse-card">
+          <form class="kontakt-form" action="mailto:sophie.fellhofer@email.de" method="post" enctype="text/plain">
+            <label for="email">E-Mail:</label><br>
+            <input type="email" id="email" name="email" required placeholder="Deine E-Mail-Adresse"><br><br>
+            <label for="message">Nachricht:</label><br>
+            <textarea id="message" name="message" rows="5" required placeholder="Deine Nachricht"></textarea><br><br>
+            <button type="submit">Absenden</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
   <script>
     function toggleMenu() {
-      const nav = document.querySelector('header nav');
-      nav.classList.toggle('open');
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('show');
     }
   </script>
 </body>

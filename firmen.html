@@ -7,8 +7,13 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <div class="design-bg1 design-bg-bottom-left"></div>
+    <div class="design-bg2"></div>
   <header>
-    <div><strong>Yoga mit Sophie</strong></div>
+    <div class="header-logo-title">
+      <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="header-logo" />
+      <span class="header-title">Yoga mit Sophie</span>
+    </div>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
       <a href="index.html">Kurse</a>
@@ -20,15 +25,28 @@
     </nav>
   </header>
   <div class="container">
-    <h1>Firmen/Personal Yoga</h1>
-    <div class="box">
-      <p>Individuelle Yin Yoga Angebote für Firmen und Einzelpersonen. Fördere das Wohlbefinden und die Gesundheit in deinem Unternehmen oder privat.</p>
+    <h1 style="font-weight: normal;">Personal Yoga</h1>
+    <div class="kurse-flex">
+      <div class="kurse-info">
+        <div class="kurse-card">
+          <span class="highlight" style="font-size:1.2rem; color:#c0a24f;">Zeit für dich</span><br><br>
+          <strong>PERSONAL YOGA</strong><br><br>
+          Deine persönlichen Ziele werden im Vorfeld besprochen und gezielt berücksichtigt.<br><br>
+          Die volle Aufmerksamkeit liegt auf dir. So kann jede Übung in Ausführung und Intensität individuell angepasst und jederzeit korrigiert werden.<br><br>
+          Zeit für die Yogapraxis können individuell festgelegt werden.<br><br>
+          <strong>Asanas, Meditation, Pranayama</strong><br>
+          Somatisches Yoga<br>
+          Yin Yoga<br>
+          Passives Yoga (Nuad Yoga)<br>
+          60, 75, 90 Minuten<br><br>
+        </div>
+      </div>
     </div>
   </div>
   <script>
     function toggleMenu() {
-      const nav = document.querySelector('header nav');
-      nav.classList.toggle('active');
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('show');
     }
   </script>
 </body>
