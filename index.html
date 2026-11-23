@@ -12,10 +12,8 @@
     }
   </script>
 </head>
-<body>
-    <div class="design-bg1 design-bg-bottom-left"></div>
-    <div class="design-bg2"></div>
-  <header>
+<body class="has-hero">
+  <header class="is-transparent">
     <div class="header-logo-title">
       <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="header-logo" />
       <span class="header-title">Yoga mit Sophie</span>
@@ -23,53 +21,49 @@
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
       <a href="index.html">Kurse</a>
-      <a href="workshops.html">Workshops</a>
-      <a href="retreats.html">Retreats</a>
+      <a href="workshops.html">Workshops/Retreats</a>
+      <a href="retreats.html">Yoga auf der Alm</a>
       <a href="firmen.html">Firmen/Personal Yoga</a>
       <a href="about.html">About me</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
+  <section class="hero">
+    <img src="images/fotoshooting/foto04.jpg" alt="Yoga mit Sophie" class="hero-photo" />
+    <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="hero-logo" />
+    <h1>Yoga mit Sophie</h1>
+    <p>Yoga, Qigong und Meditation in Altheim.</p>
+    <a href="#kurse" class="btn">Zu den Kursen</a>
+  </section>
   <div class="container">
-    <h1 style="font-weight: normal;">Wöchentliche Kurse</h1>
-    <div class="kurse-flex">
-      <div class="kurse-info">
-        <div class="kurse-card">
-          <strong>Montag – Altheim, Pfarrheim</strong><br />
-          Yoga + Qigong: 18:00–19:00<br />
-          Vinyasa/Power Yoga: 19:10–20:10<br />
-          <br />
-          <strong>Dienstag – Mühlheim, Volksschule</strong><br />
-          Yoga: 18:45–19:45<br />
-          <img src="images/logos/gesgemeinde.png" alt="Logo Gemeinde" style="max-width:120px; width:auto; margin:0rem 0 1rem 0; display:block; background:none; box-shadow:none; border-radius:0;" />
-          <strong>Mitzubringen:</strong> 
-          <br />
-          Yogamatte, bequeme Kleidung, evtl. Decke oder Kissen<br /><br />
-          Die Stunden finden wöchentlich statt und sind für Anfänger und Fortgeschrittene geeignet. Komm gerne zu einer Probestunde vorbei!
-          <br /><br />
-          <strong>Kosten:</strong><br />
-          10er-Karte: 120€<br />
-          5er-Karte: 65€<br />
-          Einzelstunde: 15€<br />
-          <br />
-          Offen für alle, keine Vorkenntnisse notwendig.
+    <h1 id="kurse" style="font-weight: normal;">Wöchentliche Kurse</h1>
+    <div class="kurse-info kurse-info--wide">
+      <div class="kurse-card kurse-card--split">
+        <div class="kurse-card-text">
+            <strong>Montag – Altheim, Pfarrheim</strong><br />
+            Yoga + Qigong: 18:00–19:00<br />
+            Vinyasa/Power Yoga: 19:10–20:10<br />
+            <br />
+            <strong>Mitzubringen:</strong>
+            <ul style="margin:0.3rem 0 1rem; padding-left:1.1rem;">
+              <li>Yogamatte</li>
+              <li>bequeme Kleidung</li>
+              <li>evtl. Decke oder Kissen</li>
+            </ul>
+            Die Stunden finden wöchentlich statt und sind für Anfänger und Fortgeschrittene geeignet. Komm gerne zu einer Probestunde vorbei!
+            <br /><br />
+            <strong>Kosten:</strong><br />
+            10er-Karte: 120€<br />
+            5er-Karte: 65€<br />
+            Einzelstunde: 15€<br />
+            <br />
+            Offen für alle, keine Vorkenntnisse notwendig.
         </div>
-      </div>
-      <div class="kurse-gallery">
-        <div class="gallery-bg">
-          <div class="gallery-row">
-            <img src="images/promote6.jpeg" alt="Yoga Bild 1" class="gallery-img" onclick="openFullSize(this.src)">
-            <img src="images/promote7.jpeg" alt="Yoga Bild 2" class="gallery-img" onclick="openFullSize(this.src)">
-          </div>
-          <div class="gallery-row">
-            <img src="images/promote3.jpeg" alt="Yoga Bild 3" class="gallery-img" onclick="openFullSize(this.src)">
-            <img src="images/promote4.jpeg" alt="Yoga Bild 4" class="gallery-img" onclick="openFullSize(this.src)">
-          </div>
-        </div>
+        <img src="images/fotoshooting/foto06.jpg" alt="Yoga mit Sophie" class="kurse-card-photo" onclick="openFullSize(this.src)">
       </div>
     </div>
     <div class="kurse-info">
-      <div class="kurse-card" style="background:rgba(255, 120, 40, 0.13); border-left: 4px solid #c0a24f;">
+      <div class="kurse-card" style="background:rgba(154,191,186,0.25); border-left: 4px solid #e1b14a;">
         <strong>Für alle, die ...</strong>
         <ul style="margin-top:1rem; margin-bottom:0;">
           <li>durch Asanas, Pranayama & Meditation gut ins Spüren kommen wollen,</li>
@@ -95,6 +89,7 @@
       <img class="modal-content" id="modal-img">
     </div>
   </div>
+  <img src="images/fotoshooting/foto08.jpg" alt="Yoga mit Sophie" class="content-photo" onclick="openFullSize(this.src)">
   <footer class="site-footer">
     <div class="footer-content">
       <a href="impressum.html">Impressum</a> &nbsp;|&nbsp; <a href="datenschutz.html">Datenschutz</a>
@@ -115,8 +110,8 @@
     }
     .site-footer {
       width: 100%;
-      background: linear-gradient(90deg, #f4dfd8 60%, #fffaf7 100%);
-      border-top: 2px solid #e5d3c6;
+      background: linear-gradient(90deg, #e6ecdf 60%, #fbf7ed 100%);
+      border-top: 2px solid #e3dcc4;
       padding: 2.2rem 0 1.2rem 0;
       display: flex;
       justify-content: center;
@@ -127,17 +122,17 @@
     }
     .footer-content {
       font-size: 1.08rem;
-      color: #7a6a4f;
+      color: #4b5b73;
       letter-spacing: 0.01em;
       text-align: center;
     }
     .footer-content a {
-      color: #c0a24f;
+      color: #e1b14a;
       text-decoration: underline;
       transition: color 0.2s;
     }
     .footer-content a:hover {
-      color: #a08a3a;
+      color: #c99a2e;
     }
     @media (max-width: 600px) {
       .site-footer {
@@ -150,6 +145,12 @@
     }
   </style>
   <script>
+    (function () {
+      var header = document.querySelector('header');
+      function update() { header.classList.toggle('is-transparent', window.scrollY < 40); }
+      update();
+      window.addEventListener('scroll', update, { passive: true });
+    })();
     function openFullSize(src) {
       var modal = document.getElementById('modal');
       var modalImg = document.getElementById('modal-img');

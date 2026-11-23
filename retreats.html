@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Retreats – Yin Yoga</title>
+  <title>Yoga auf der Alm – Yoga mit Sophie</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-    <div class="design-bg1 design-bg-bottom-left"></div>
-    <div class="design-bg2"></div>
-  <header>
+<body class="has-hero">
+  <header class="is-transparent">
     <div class="header-logo-title">
       <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="header-logo" />
       <span class="header-title">Yoga mit Sophie</span>
@@ -17,15 +15,18 @@
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
       <a href="index.html">Kurse</a>
-      <a href="workshops.html">Workshops</a>
-      <a href="retreats.html">Retreats</a>
+      <a href="workshops.html">Workshops/Retreats</a>
+      <a href="retreats.html">Yoga auf der Alm</a>
       <a href="firmen.html">Firmen/Personal Yoga</a>
       <a href="about.html">About me</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
+  <section class="hero hero--page">
+    <img src="images/alm/alm2.jpeg" alt="Yoga auf der Alm" class="hero-photo" />
+    <h1>Yoga auf der Alm</h1>
+  </section>
   <div class="container">
-    <h1 style="font-weight: normal;">Yoga auf der Alm</h1>
     <div class="kurse-flex">
       <div class="kurse-info">
         <div class="kurse-card">
@@ -42,27 +43,33 @@
           6 – 10 Teilnehmer/-innen
         </div>
       </div>
-      <div class="kurse-gallery">
-        <div class="gallery-bg">
-          <div class="gallery-row">
-            <img src="images/alm/alm5.jpeg" alt="Yoga auf der Alm Bild 1" class="gallery-img" onclick="openFullSize(this.src)">
-            <img src="images/alm/alm6.jpeg" alt="Yoga auf der Alm Bild 2" class="gallery-img" onclick="openFullSize(this.src)">
-          </div>
-          <div class="gallery-row">
-            <img src="images/alm/alm1.jpeg" alt="Yoga auf der Alm Bild 3" class="gallery-img" onclick="openFullSize(this.src)">
-            <img src="images/alm/alm7.jpeg" alt="Yoga auf der Alm Bild 4" class="gallery-img" onclick="openFullSize(this.src)">
-          </div>
-          <div class="gallery-row">
-            <img src="images/alm/alm2.jpeg" alt="Yoga auf der Alm Bild 5" class="gallery-img" onclick="openFullSize(this.src)">
-            <img src="images/alm/alm4.jpeg" alt="Yoga auf der Alm Bild 6" class="gallery-img" onclick="openFullSize(this.src)">
-          </div>
-        </div>
-      </div>
       <div id="modal" class="modal" onclick="closeModal()">
         <span class="modal-close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modal-img">
       </div>
     </div>
+    <section class="carousel" aria-roledescription="Karussell" aria-label="Bilder Yoga auf der Alm">
+      <div class="carousel-wrap">
+        <button class="carousel-nav carousel-prev" type="button" aria-label="Vorheriges Bild">&#8249;</button>
+        <ul class="carousel-track" tabindex="0">
+        <li class="slide"><img src="images/alm/alm5.jpeg" alt="Yoga auf der Alm Bild 1" loading="eager" onclick="openFullSize(this.src)"></li>
+        <li class="slide"><img src="images/alm/alm6.jpeg" alt="Yoga auf der Alm Bild 2" loading="lazy" onclick="openFullSize(this.src)"></li>
+        <li class="slide"><img src="images/alm/alm1.jpeg" alt="Yoga auf der Alm Bild 3" loading="lazy" onclick="openFullSize(this.src)"></li>
+        <li class="slide"><img src="images/alm/alm7.jpeg" alt="Yoga auf der Alm Bild 4" loading="lazy" onclick="openFullSize(this.src)"></li>
+        <li class="slide"><img src="images/alm/alm2.jpeg" alt="Yoga auf der Alm Bild 5" loading="lazy" onclick="openFullSize(this.src)"></li>
+        <li class="slide"><img src="images/alm/alm4.jpeg" alt="Yoga auf der Alm Bild 6" loading="lazy" onclick="openFullSize(this.src)"></li>
+        </ul>
+        <button class="carousel-nav carousel-next" type="button" aria-label="Nächstes Bild">&#8250;</button>
+      </div>
+      <div class="carousel-dots">
+        <button class="carousel-dot" type="button" aria-label="Zu Bild 1"></button>
+        <button class="carousel-dot" type="button" aria-label="Zu Bild 2"></button>
+        <button class="carousel-dot" type="button" aria-label="Zu Bild 3"></button>
+        <button class="carousel-dot" type="button" aria-label="Zu Bild 4"></button>
+        <button class="carousel-dot" type="button" aria-label="Zu Bild 5"></button>
+        <button class="carousel-dot" type="button" aria-label="Zu Bild 6"></button>
+      </div>
+    </section>
   </div>
   <footer class="site-footer">
     <div class="footer-content">
@@ -84,8 +91,8 @@
     }
     .site-footer {
       width: 100%;
-      background: linear-gradient(90deg, #f4dfd8 60%, #fffaf7 100%);
-      border-top: 2px solid #e5d3c6;
+      background: linear-gradient(90deg, #e6ecdf 60%, #fbf7ed 100%);
+      border-top: 2px solid #e3dcc4;
       padding: 2.2rem 0 1.2rem 0;
       display: flex;
       justify-content: center;
@@ -96,17 +103,17 @@
     }
     .footer-content {
       font-size: 1.08rem;
-      color: #7a6a4f;
+      color: #4b5b73;
       letter-spacing: 0.01em;
       text-align: center;
     }
     .footer-content a {
-      color: #c0a24f;
+      color: #e1b14a;
       text-decoration: underline;
       transition: color 0.2s;
     }
     .footer-content a:hover {
-      color: #a08a3a;
+      color: #c99a2e;
     }
     @media (max-width: 600px) {
       .site-footer {
@@ -118,7 +125,14 @@
       }
     }
   </style>
+  <script src="carousel.js"></script>
   <script>
+    (function () {
+      var header = document.querySelector('header');
+      function update() { header.classList.toggle('is-transparent', window.scrollY < 40); }
+      update();
+      window.addEventListener('scroll', update, { passive: true });
+    })();
     function toggleMenu() {
       const nav = document.querySelector('nav');
       nav.classList.toggle('show');

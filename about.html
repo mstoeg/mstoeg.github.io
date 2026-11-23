@@ -6,10 +6,8 @@
   <title>About me – Yin Yoga</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-    <div class="design-bg1 design-bg-bottom-left"></div>
-    <div class="design-bg2"></div>
-  <header>
+<body class="has-hero">
+  <header class="is-transparent">
     <div class="header-logo-title">
       <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="header-logo" />
       <span class="header-title">Yoga mit Sophie</span>
@@ -17,19 +15,21 @@
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
       <a href="index.html">Kurse</a>
-      <a href="workshops.html">Workshops</a>
-      <a href="retreats.html">Retreats</a>
+      <a href="workshops.html">Workshops/Retreats</a>
+      <a href="retreats.html">Yoga auf der Alm</a>
       <a href="firmen.html">Firmen/Personal Yoga</a>
       <a href="about.html">About me</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
+  <section class="hero hero--page">
+    <img src="images/fotoshooting/foto05.jpg" alt="Sophie Fellhofer" class="hero-photo" />
+    <h1>About me</h1>
+  </section>
   <div class="container">
-    <h1 style="font-weight: normal;">About me</h1>
     <div class="kurse-flex">
       <div class="kurse-info">
         <div class="kurse-card">
-          <img src="images/about/aboutme.jpeg" alt="Sophie Fellhofer Portrait" class="aboutme-img" />
           <p>
             Hallo, ich bin Sophie, 26 Jahre alt, lebe in Altheim und arbeite hauptberuflich als Software-Entwicklerin.
           </p>
@@ -44,21 +44,30 @@
           </p>
         </div>
         <div class="kurse-card" style="margin-top:1.5rem;">
-          <h2 style="font-size:1.15rem; font-weight:normal; color:#c0a24f; margin-top:0; margin-bottom:0.7rem;">Ausbildungen</h2>
+          <h2 style="font-size:1.15rem; font-weight:normal; color:#698a6e; margin-top:0; margin-bottom:0.7rem;">Ausbildungen</h2>
           <ul style="margin-top:0; margin-bottom:0;">
             <li>2021: Yoga & Qigong Coach, 200 Stunden, Yogo</li>
             <li>2022: Teachers Training Course in Yoga Education, 200 Stunden, The Yoga Institute</li>
             <li>2023: Yogalehrerausbildung, 200 Stunden, NowYoga Academy</li>
             <li>2025: Yogalehrerausbildung, 300 Stunden, NowYoga Academy</li>
           </ul>
-          <div class="aboutme-certificates-row">
-            <img src="images/about/certificate.JPG" alt="Zertifikat Yoga Ausbildung" class="aboutme-certificate" />
-            <img src="images/about/training.JPG" alt="Yoga Training Bild" class="aboutme-certificate" />
-            <img src="images/about/certificate2.JPG" alt="Zertifikat Yoga Ausbildung 2" class="aboutme-certificate" />
-          </div>
         </div>
       </div>
     </div>
+  <section class="carousel carousel--portrait" aria-roledescription="Karussell" aria-label="Zertifikate">
+    <div class="carousel-wrap">
+      <button class="carousel-nav carousel-prev" type="button" aria-label="Vorheriges Bild">&#8249;</button>
+      <ul class="carousel-track" tabindex="0">
+        <li class="slide"><img src="images/about/certificate.JPG" alt="Zertifikat Yoga Ausbildung" onclick="openFullSize(this.src)"></li>
+        <li class="slide"><img src="images/about/training.JPG" alt="Yoga Training Bild" onclick="openFullSize(this.src)"></li>
+      </ul>
+      <button class="carousel-nav carousel-next" type="button" aria-label="Nächstes Bild">&#8250;</button>
+    </div>
+    <div class="carousel-dots">
+      <button class="carousel-dot" type="button" aria-label="Zu Bild 1"></button>
+      <button class="carousel-dot" type="button" aria-label="Zu Bild 2"></button>
+    </div>
+  </section>
   </div>
   <footer class="site-footer">
     <div class="footer-content">
@@ -81,8 +90,8 @@
     }
     .site-footer {
       width: 100%;
-      background: linear-gradient(90deg, #f4dfd8 60%, #fffaf7 100%);
-      border-top: 2px solid #e5d3c6;
+      background: linear-gradient(90deg, #e6ecdf 60%, #fbf7ed 100%);
+      border-top: 2px solid #e3dcc4;
       padding: 2.2rem 0 1.2rem 0;
       display: flex;
       justify-content: center;
@@ -93,17 +102,17 @@
     }
     .footer-content {
       font-size: 1.08rem;
-      color: #7a6a4f;
+      color: #4b5b73;
       letter-spacing: 0.01em;
       text-align: center;
     }
     .footer-content a {
-      color: #c0a24f;
+      color: #e1b14a;
       text-decoration: underline;
       transition: color 0.2s;
     }
     .footer-content a:hover {
-      color: #a08a3a;
+      color: #c99a2e;
     }
     @media (max-width: 600px) {
       .site-footer {
@@ -115,7 +124,25 @@
       }
     }
   </style>
+  <div id="modal" class="modal" onclick="closeModal()">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+  <script src="carousel.js"></script>
   <script>
+    (function () {
+      var header = document.querySelector('header');
+      function update() { header.classList.toggle('is-transparent', window.scrollY < 40); }
+      update();
+      window.addEventListener('scroll', update, { passive: true });
+    })();
+    function openFullSize(src) {
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
     function toggleMenu() {
       const nav = document.querySelector('nav');
       nav.classList.toggle('show');

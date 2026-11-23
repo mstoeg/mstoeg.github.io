@@ -6,10 +6,8 @@
   <title>Kontakt – Yin Yoga</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-    <div class="design-bg1 design-bg-bottom-left"></div>
-    <div class="design-bg2"></div>
-  <header>
+<body class="has-hero">
+  <header class="is-transparent">
     <div class="header-logo-title">
       <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="header-logo" />
       <span class="header-title">Yoga mit Sophie</span>
@@ -17,15 +15,18 @@
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
       <a href="index.html">Kurse</a>
-      <a href="workshops.html">Workshops</a>
-      <a href="retreats.html">Retreats</a>
+      <a href="workshops.html">Workshops/Retreats</a>
+      <a href="retreats.html">Yoga auf der Alm</a>
       <a href="firmen.html">Firmen/Personal Yoga</a>
       <a href="about.html">About me</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
+  <section class="hero hero--page">
+    <img src="images/fotoshooting/foto03.jpg" alt="Kontakt" class="hero-photo" />
+    <h1>Kontakt</h1>
+  </section>
   <div class="container">
-    <h1 style="font-weight: normal;">Kontakt</h1>
     <div class="kurse-flex">
       <div class="kurse-info">
         <div class="kurse-card">
@@ -64,8 +65,8 @@
     }
     .site-footer {
       width: 100vw;
-      background: linear-gradient(90deg, #f4dfd8 60%, #fffaf7 100%);
-      border-top: 2px solid #e5d3c6;
+      background: linear-gradient(90deg, #e6ecdf 60%, #fbf7ed 100%);
+      border-top: 2px solid #e3dcc4;
       margin-top: 3rem;
       padding: 2.2rem 0 1.2rem 0;
       display: flex;
@@ -76,17 +77,17 @@
     }
     .footer-content {
       font-size: 1.08rem;
-      color: #7a6a4f;
+      color: #4b5b73;
       letter-spacing: 0.01em;
       text-align: center;
     }
     .footer-content a {
-      color: #c0a24f;
+      color: #e1b14a;
       text-decoration: underline;
       transition: color 0.2s;
     }
     .footer-content a:hover {
-      color: #a08a3a;
+      color: #c99a2e;
     }
     @media (max-width: 600px) {
       .site-footer {
@@ -99,6 +100,12 @@
     }
   </style>
   <script>
+    (function () {
+      var header = document.querySelector('header');
+      function update() { header.classList.toggle('is-transparent', window.scrollY < 40); }
+      update();
+      window.addEventListener('scroll', update, { passive: true });
+    })();
     function toggleMenu() {
       const nav = document.querySelector('nav');
       nav.classList.toggle('show');
