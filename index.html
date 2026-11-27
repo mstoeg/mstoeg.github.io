@@ -8,18 +8,19 @@
   <script>
     function toggleMenu() {
       const nav = document.querySelector('nav');
-      nav.classList.toggle('show');
+      const open = nav.classList.toggle('show');
+      document.querySelector('.menu-toggle').setAttribute('aria-expanded', String(open));
     }
   </script>
 </head>
 <body class="has-hero">
   <header class="is-transparent">
-    <div class="header-logo-title">
+    <a class="header-logo-title" href="index.html" aria-label="Zur Startseite">
       <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="header-logo" />
       <span class="header-title">Yoga mit Sophie</span>
-    </div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Menü" aria-controls="site-nav" aria-expanded="false" onclick="toggleMenu()">☰</button>
+    <nav id="site-nav">
       <a href="index.html">Kurse</a>
       <a href="workshops.html">Workshops/Retreats</a>
       <a href="retreats.html">Yoga auf der Alm</a>
@@ -36,11 +37,13 @@
     <a href="#kurse" class="btn">Zu den Kursen</a>
   </section>
   <div class="container">
-    <h1 id="kurse" style="font-weight: normal;">Wöchentliche Kurse</h1>
+    <h2 id="kurse">Wöchentliche Kurse</h2>
+    <div class="weekly-courses">
     <div class="kurse-info kurse-info--wide">
       <div class="kurse-card kurse-card--split">
         <div class="kurse-card-text">
-            <strong>Montag – Altheim, Pfarrheim</strong><br />
+            <h3 class="section-title">Yoga mit Sophie</h3>
+            <strong>Montag</strong><br />
             Yoga + Qigong: 18:00–19:00<br />
             Vinyasa/Power Yoga: 19:10–20:10<br />
             <br />
@@ -59,11 +62,26 @@
             <br />
             Offen für alle, keine Vorkenntnisse notwendig.
         </div>
-        <img src="images/fotoshooting/foto06.jpg" alt="Yoga mit Sophie" class="kurse-card-photo" onclick="openFullSize(this.src)">
       </div>
     </div>
+    <aside class="kurse-card course-location" aria-labelledby="course-location-title">
+      <p class="course-location-title" id="course-location-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        Standort
+      </p>
+      <div class="course-map">
+        <iframe title="Standortkarte: Pfarrheim Altheim" src="https://www.openstreetmap.org/export/embed.html?bbox=13.230832%2C48.2472475%2C13.236832%2C48.2502475&amp;layer=mapnik&amp;marker=48.2487475%2C13.2338320" loading="lazy" referrerpolicy="no-referrer"></iframe>
+      </div>
+      <div class="course-address">
+        <p>Pfarrheim Altheim<br>Am Anger 4, 4950 Altheim</p>
+      </div>
+    </aside>
+    </div>
     <div class="kurse-info">
-      <div class="kurse-card" style="background:rgba(154,191,186,0.25); border-left: 4px solid #e1b14a;">
+      <div class="kurse-card" style="background:rgba(154,191,186,0.25); border-left: 4px solid var(--green);">
         <strong>Für alle, die ...</strong>
         <ul style="margin-top:1rem; margin-bottom:0;">
           <li>durch Asanas, Pranayama & Meditation gut ins Spüren kommen wollen,</li>
@@ -95,55 +113,6 @@
       <a href="impressum.html">Impressum</a> &nbsp;|&nbsp; <a href="datenschutz.html">Datenschutz</a>
     </div>
   </footer>
-  <style>
-    html, body {
-      height: 100%;
-    }
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-    .container {
-      flex: 1 0 auto;
-    }
-    .site-footer {
-      width: 100%;
-      background: linear-gradient(90deg, #e6ecdf 60%, #fbf7ed 100%);
-      border-top: 2px solid #e3dcc4;
-      padding: 2.2rem 0 1.2rem 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 80px;
-      box-sizing: border-box;
-      z-index: 100;
-    }
-    .footer-content {
-      font-size: 1.08rem;
-      color: #4b5b73;
-      letter-spacing: 0.01em;
-      text-align: center;
-    }
-    .footer-content a {
-      color: #e1b14a;
-      text-decoration: underline;
-      transition: color 0.2s;
-    }
-    .footer-content a:hover {
-      color: #c99a2e;
-    }
-    @media (max-width: 600px) {
-      .site-footer {
-        padding: 1.2rem 0 0.7rem 0;
-        min-height: 60px;
-      }
-      .footer-content {
-        font-size: 0.98rem;
-      }
-    }
-  </style>
   <script>
     (function () {
       var header = document.querySelector('header');

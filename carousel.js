@@ -10,10 +10,10 @@ document.querySelectorAll('.carousel').forEach(function (box) {
     }
     return best;
   }
-  function go(i) {
+  function go(i, behavior) {
     i = Math.max(0, Math.min(slides.length - 1, i));
     var s = slides[i];
-    track.scrollTo({ left: s.offsetLeft - (track.clientWidth - s.offsetWidth) / 2, behavior: 'smooth' });
+    track.scrollTo({ left: s.offsetLeft - (track.clientWidth - s.offsetWidth) / 2, behavior: behavior || 'smooth' });
   }
   function sync() {
     var c = current();
@@ -46,6 +46,6 @@ document.querySelectorAll('.carousel').forEach(function (box) {
   ['mouseleave', 'focusout', 'touchend'].forEach(function (ev) {
     box.addEventListener(ev, function () { paused = false; }, { passive: true });
   });
-  window.addEventListener('load', function () { go(0); sync(); start(); });
+  window.addEventListener('load', function () { go(Math.floor(slides.length / 2), 'instant'); sync(); start(); });
   sync();
 });

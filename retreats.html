@@ -8,12 +8,12 @@
 </head>
 <body class="has-hero">
   <header class="is-transparent">
-    <div class="header-logo-title">
+    <a class="header-logo-title" href="index.html" aria-label="Zur Startseite">
       <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="header-logo" />
       <span class="header-title">Yoga mit Sophie</span>
-    </div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Menü" aria-controls="site-nav" aria-expanded="false" onclick="toggleMenu()">☰</button>
+    <nav id="site-nav">
       <a href="index.html">Kurse</a>
       <a href="workshops.html">Workshops/Retreats</a>
       <a href="retreats.html">Yoga auf der Alm</a>
@@ -23,24 +23,20 @@
     </nav>
   </header>
   <section class="hero hero--page">
-    <img src="images/alm/alm2.jpeg" alt="Yoga auf der Alm" class="hero-photo" />
+    <img src="images/alm/alm8.JPG" alt="Yoga auf der Alm" class="hero-photo" />
     <h1>Yoga auf der Alm</h1>
   </section>
   <div class="container">
     <div class="kurse-flex">
       <div class="kurse-info">
         <div class="kurse-card">
+          <h2 class="section-title">Yoga auf der Alm</h2>
           Neben gemeinsamen Yoga-Asana Einheiten, Meditation und Atemübungen (Pranayama) erwarten euch Einblicke in die Yoga-Philosophie.<br><br>
           Bei hochwertigem und sehr ausgiebigem Frühstück und Abendessen freue ich mich über den gemütlichen Austausch untereinander.<br><br>
           Die Präaualm liegt auf 1808m in den Gasteiner Bergen und bietet den idealen Platz für wohltuende Tage.
           <br><br>
-          <strong>Ort:</strong> Präaualm, Dorfgastein<br>
-          <strong>Termin 1:</strong> 12.08. – 14.08.2025<br>
-          <strong>Termin 2:</strong> 15.08. – 17.08.2025<br>
-          <strong>Treffpunkt:</strong> Präauweg 2, 5632 Dorfgastein, ca. 9 Uhr<br><br>
-          <strong>Kosten:</strong> 390€<br>
-          <span style="font-size:0.98em;">(davon: Kurskosten: 260€, Übernachtung + HP: 130€)</span><br><br>
-          6 – 10 Teilnehmer/-innen
+          <strong>Termin:</strong> folgt<br>
+          <strong>Ort:</strong> Präaualm, Dorfgastein
         </div>
       </div>
       <div id="modal" class="modal" onclick="closeModal()">
@@ -52,12 +48,14 @@
       <div class="carousel-wrap">
         <button class="carousel-nav carousel-prev" type="button" aria-label="Vorheriges Bild">&#8249;</button>
         <ul class="carousel-track" tabindex="0">
-        <li class="slide"><img src="images/alm/alm5.jpeg" alt="Yoga auf der Alm Bild 1" loading="eager" onclick="openFullSize(this.src)"></li>
-        <li class="slide"><img src="images/alm/alm6.jpeg" alt="Yoga auf der Alm Bild 2" loading="lazy" onclick="openFullSize(this.src)"></li>
-        <li class="slide"><img src="images/alm/alm1.jpeg" alt="Yoga auf der Alm Bild 3" loading="lazy" onclick="openFullSize(this.src)"></li>
-        <li class="slide"><img src="images/alm/alm7.jpeg" alt="Yoga auf der Alm Bild 4" loading="lazy" onclick="openFullSize(this.src)"></li>
-        <li class="slide"><img src="images/alm/alm2.jpeg" alt="Yoga auf der Alm Bild 5" loading="lazy" onclick="openFullSize(this.src)"></li>
+        <li class="slide"><img src="images/alm/alm9.jpeg" alt="Yoga auf der Alm Bild 1" loading="eager" onclick="openFullSize(this.src)"></li>
+        <li class="slide"><img src="images/alm/alm7.jpeg" alt="Yoga auf der Alm Bild 2" loading="lazy" onclick="openFullSize(this.src)"></li>
+        <li class="slide"><img src="images/alm/alm10.jpeg" alt="Yoga auf der Alm Bild 3" loading="lazy" onclick="openFullSize(this.src)"></li>
+        <li class="slide"><img src="images/alm/alm11.jpeg" alt="Yoga auf der Alm Bild 4" loading="lazy" onclick="openFullSize(this.src)"></li>
+        <li class="slide"><img src="images/alm/alm12.jpeg" alt="Yoga auf der Alm Bild 5" loading="lazy" onclick="openFullSize(this.src)"></li>
         <li class="slide"><img src="images/alm/alm4.jpeg" alt="Yoga auf der Alm Bild 6" loading="lazy" onclick="openFullSize(this.src)"></li>
+        <li class="slide"><img src="images/alm/alm13.jpeg" alt="Yoga auf der Alm Bild 7" loading="lazy" onclick="openFullSize(this.src)"></li>
+        <li class="slide"><img src="images/alm/alm14.jpeg" alt="Yoga auf der Alm Bild 8" loading="lazy" onclick="openFullSize(this.src)"></li>
         </ul>
         <button class="carousel-nav carousel-next" type="button" aria-label="Nächstes Bild">&#8250;</button>
       </div>
@@ -68,6 +66,8 @@
         <button class="carousel-dot" type="button" aria-label="Zu Bild 4"></button>
         <button class="carousel-dot" type="button" aria-label="Zu Bild 5"></button>
         <button class="carousel-dot" type="button" aria-label="Zu Bild 6"></button>
+        <button class="carousel-dot" type="button" aria-label="Zu Bild 7"></button>
+        <button class="carousel-dot" type="button" aria-label="Zu Bild 8"></button>
       </div>
     </section>
   </div>
@@ -76,55 +76,6 @@
       <a href="impressum.html">Impressum</a> &nbsp;|&nbsp; <a href="datenschutz.html">Datenschutz</a>
     </div>
   </footer>
-  <style>
-    html, body {
-      height: 100%;
-    }
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-    .container {
-      flex: 1 0 auto;
-    }
-    .site-footer {
-      width: 100%;
-      background: linear-gradient(90deg, #e6ecdf 60%, #fbf7ed 100%);
-      border-top: 2px solid #e3dcc4;
-      padding: 2.2rem 0 1.2rem 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 80px;
-      box-sizing: border-box;
-      z-index: 100;
-    }
-    .footer-content {
-      font-size: 1.08rem;
-      color: #4b5b73;
-      letter-spacing: 0.01em;
-      text-align: center;
-    }
-    .footer-content a {
-      color: #e1b14a;
-      text-decoration: underline;
-      transition: color 0.2s;
-    }
-    .footer-content a:hover {
-      color: #c99a2e;
-    }
-    @media (max-width: 600px) {
-      .site-footer {
-        padding: 1.2rem 0 0.7rem 0;
-        min-height: 60px;
-      }
-      .footer-content {
-        font-size: 0.98rem;
-      }
-    }
-  </style>
   <script src="carousel.js"></script>
   <script>
     (function () {
@@ -135,7 +86,8 @@
     })();
     function toggleMenu() {
       const nav = document.querySelector('nav');
-      nav.classList.toggle('show');
+      const open = nav.classList.toggle('show');
+      document.querySelector('.menu-toggle').setAttribute('aria-expanded', String(open));
     }
     function openFullSize(src) {
       var modal = document.getElementById('modal');

@@ -8,12 +8,12 @@
 </head>
 <body class="has-hero">
   <header class="is-transparent">
-    <div class="header-logo-title">
+    <a class="header-logo-title" href="index.html" aria-label="Zur Startseite">
       <img src="images/logos/logo.png" alt="Yoga mit Sophie Logo" class="header-logo" />
       <span class="header-title">Yoga mit Sophie</span>
-    </div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Menü" aria-controls="site-nav" aria-expanded="false" onclick="toggleMenu()">☰</button>
+    <nav id="site-nav">
       <a href="index.html">Kurse</a>
       <a href="workshops.html">Workshops/Retreats</a>
       <a href="retreats.html">Yoga auf der Alm</a>
@@ -22,27 +22,94 @@
       <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
-  <h1 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Workshops/Retreats</h1>
-  <section class="workshop">
+  <section class="hero">
+    <img src="images/fotoshooting/foto23.jpg" alt="Yoga mit Sophie" class="hero-photo" />
+    <h1>Workshops/Retreats</h1>
+    <a href="#workshops" class="btn">Zu den Workshops</a>
+  </section>
+  <div class="container workshops-intro" id="workshops">
+    <div class="kurse-card">
+      <h2 class="section-title">Workshops/Retreats</h2>
+      <p>Über das Jahr hinweg biete ich verschiedene Workshops und Retreats an, die Raum für Bewegung, Entspannung und Austausch schaffen. Hast du Interesse oder eine Idee für einen neuen Workshop? Dann komm gerne auf mich zu!</p>
+      <p>Hier findest du eine Übersicht meiner jährlichen Workshops und Retreats.</p>
+      <ul class="workshop-links">
+        <li><a href="#release-and-reconnect">Release and Reconnect</a></li>
+        <li><a href="#mandala-flow">Feel Good Day</a></li>
+        <li><a href="#alpaka-yoga">Alpaka Yoga</a></li>
+        <li><a href="#yoga-und-genuss">Yoga und Genuss</a></li>
+      </ul>
+    </div>
+  </div>
+  <section class="workshop" id="release-and-reconnect">
     <section class="hero hero--full">
-      <img src="images/Mandala/049F7342-E4CC-48FC-B6EB-548E12CE3287.jpeg" alt="Mandala Flow" class="hero-photo" />
-      <h2>Mandala Flow</h2>
+      <img src="images/fotoshooting/foto06.jpg" alt="Release and Reconnect" class="hero-photo" />
+      <h2>Release and Reconnect</h2>
     </section>
     <div class="container">
       <div class="kurse-card">
-        <p>Im Yoga-Teil des Tages-Retreats verbinden wir sanfte Asanas (Yoga-Haltungen) mit bewussten Pranayamas (Atemübungen) und Meditations-Phasen. Dabei wird der Fokus auf achtsames Bewegen und Atmen gelegt, um nach und nach tiefer in Verbindung mit dir zu kommen. Eine Besonderheit wird der „Mandala Flow“ – dabei bewegen wir uns rund um die Matte und wieder zurück, also „im Kreis“. („Mandala“ Sanskrit = „Kreis“)</p>
-        <p><strong>Termin:</strong> folgt<br><strong>Ort:</strong> folgt<br><strong>Kosten:</strong> folgt</p>
+        <h3 class="section-title">Release and Reconnect</h3>
+        <p>In Zusammenarbeit mit Eva Perndorfer.</p>
+        <p>Beim Release and Reconnect Yoga Retreat ist Raum für Wachstum, Austausch und Momente der Ruhe.</p>
+        <p>Täglich erwarten dich mindestens zwei Yoga-Einheiten – eine aktivierende Praxis am Morgen und eine regenerierende Einheit am Nachmittag. Der Fokus liegt auf Loslassen, Auftanken und deiner inneren Ausrichtung – in einem liebevoll gehaltenen Rahmen. Wir kombinieren Yoga-Asanas, Meditationen und Pranayama – abgestimmt auf die Bedürfnisse der Gruppe.</p>
+        <p>Neben Yoga-Asana Einheiten, Meditation und Atemübungen erwarten dich Einblicke in die Yoga-Philosophie. Passend zum Beginn der dunkleren Jahreszeit unterstützt dich das Retreat, Altes loszulassen, deine innere Stärke (wieder) zu finden und mehr bei dir anzukommen.</p>
+        <p>Zwischen den Einheiten bleibt Zeit zum Entspannen, für Spaziergänge in der Natur oder für den Wellnessbereich im Hotel.</p>
+        <p>Bei hochwertigem Frühstück, Mittag- und Abendessen freuen wir uns über den gemütlichen Austausch untereinander. Das Landhotel Moorhof ist ein herzlich geführtes 4*-Hotel mit regionaler Küche, Wellnessbereich und wunderschöner Lage inmitten der Natur – der Raum Lichtblick eignet sich ideal für unsere Yoga Einheiten.</p>
+        <p>Egal ob du bereits Yoga-Erfahrung hast oder gerade erst beginnst – du bist herzlich willkommen. Auf individuelle Bedürfnisse wird selbstverständlich eingegangen.</p>
+        <p><strong>Termin:</strong> folgt<br><strong>Ort:</strong> Landhotel Moorhof</p>
       </div>
-      <section class="carousel" aria-roledescription="Karussell" aria-label="Bilder Mandala Flow">
+      <section class="carousel carousel--portrait" aria-roledescription="Karussell" aria-label="Bilder Release and Reconnect">
         <div class="carousel-wrap">
           <button class="carousel-nav carousel-prev" type="button" aria-label="Vorheriges Bild">&#8249;</button>
           <ul class="carousel-track" tabindex="0">
-          <li class="slide"><img src="images/Mandala/049F7342-E4CC-48FC-B6EB-548E12CE3287.jpeg" alt="Mandala Flow Bild 1" loading="lazy" onclick="openFullSize(this.src)"></li>
-          <li class="slide"><img src="images/Mandala/0C8B5344-ECFC-43C0-BEDA-E31E4D15A6DB.jpeg" alt="Mandala Flow Bild 2" loading="lazy" onclick="openFullSize(this.src)"></li>
-          <li class="slide"><img src="images/Mandala/68339C86-E98C-4217-B2F4-4FC5C9A7224A.jpeg" alt="Mandala Flow Bild 3" loading="lazy" onclick="openFullSize(this.src)"></li>
-          <li class="slide"><img src="images/Mandala/8D3F074B-1C69-439D-B237-42A18EADBA9B.jpeg" alt="Mandala Flow Bild 4" loading="lazy" onclick="openFullSize(this.src)"></li>
-          <li class="slide"><img src="images/Mandala/C5887DC3-8D86-4B11-9586-692D6B98E179.jpeg" alt="Mandala Flow Bild 5" loading="lazy" onclick="openFullSize(this.src)"></li>
-          <li class="slide"><img src="images/Mandala/E14DD2E2-2D86-4F0E-AE68-D78FE9E168D2.jpeg" alt="Mandala Flow Bild 6" loading="lazy" onclick="openFullSize(this.src)"></li>
+          <li class="slide"><img src="images/release/release01.jpeg" alt="Release and Reconnect Bild 1" loading="lazy" onclick="openFullSize(this.src)"></li>
+          <li class="slide"><img src="images/release/release02.jpeg" alt="Release and Reconnect Bild 2" loading="lazy" onclick="openFullSize(this.src)"></li>
+          <li class="slide"><img src="images/release/release03.jpeg" alt="Release and Reconnect Bild 3" loading="lazy" onclick="openFullSize(this.src)"></li>
+          <li class="slide"><img src="images/release/release04.jpeg" alt="Release and Reconnect Bild 4" loading="lazy" onclick="openFullSize(this.src)"></li>
+          <li class="slide"><img src="images/release/release05.jpeg" alt="Release and Reconnect Bild 5" loading="lazy" onclick="openFullSize(this.src)"></li>
+          <li class="slide"><img src="images/release/release06.jpeg" alt="Release and Reconnect Bild 6" loading="lazy" onclick="openFullSize(this.src)"></li>
+          <li class="slide"><img src="images/release/release07.jpeg" alt="Release and Reconnect Bild 7" loading="lazy" onclick="openFullSize(this.src)"></li>
+          </ul>
+          <button class="carousel-nav carousel-next" type="button" aria-label="Nächstes Bild">&#8250;</button>
+        </div>
+        <div class="carousel-dots">
+        <button class="carousel-dot" type="button" aria-label="Zu Bild 1"></button>
+        <button class="carousel-dot" type="button" aria-label="Zu Bild 2"></button>
+        <button class="carousel-dot" type="button" aria-label="Zu Bild 3"></button>
+        <button class="carousel-dot" type="button" aria-label="Zu Bild 4"></button>
+        <button class="carousel-dot" type="button" aria-label="Zu Bild 5"></button>
+        <button class="carousel-dot" type="button" aria-label="Zu Bild 6"></button>
+        <button class="carousel-dot" type="button" aria-label="Zu Bild 7"></button>
+        </div>
+      </section>
+    </div>
+  </section>
+  <section class="workshop" id="mandala-flow">
+    <section class="hero hero--full">
+      <img src="images/Mandala/049F7342-E4CC-48FC-B6EB-548E12CE3287.jpeg" alt="Feel Good Day" class="hero-photo" />
+      <h2>Feel Good Day</h2>
+    </section>
+    <div class="container">
+      <div class="kurse-card">
+        <h3 class="section-title">Feel Good Day</h3>
+        <p>In Zusammenarbeit mit <a href="https://www.herzanherz.at/">Herz an Herz</a>.</p>
+        <p>Nimm dir einen Tag Auszeit und komme dir selbst wieder etwas näher. An diesem besonderen Tag verbinden wir sanfte Bewegungen und achtsame Körperarbeit aus dem Yoga mit Kristallklängen und kreativem Gestalten zu einem ganzheitlichen Wohlfühl-Erlebnis.</p>
+        <p><strong>Yoga &amp; somatische Übungen:</strong> Sanfte Bewegungen zur Entspannung, Beruhigung des Nervensystems und Stärkung der Körperwahrnehmung.</p>
+        <p><strong>Intuitives Malen &amp; kreatives Gestalten:</strong> Ausdruck innerer Bilder und Emotionen ohne Druck oder Bewertung.</p>
+        <p><strong>Deine eigene Affirmationskarte:</strong> Gestalte dein persönliches Kraftbild zur Begleitung über das Retreat hinaus.</p>
+        <p><strong>Kristallklang:</strong> Klänge zur Harmonisierung deines Energiefelds und Förderung innerer Balance.</p>
+        <p><strong>Achtsame Pausen &amp; Gemeinschaft:</strong> Zeit für dich und wertschätzenden Austausch.</p>
+        <p><strong>Termin:</strong> folgt<br><strong>Ort:</strong> folgt</p>
+      </div>
+      <section class="carousel" aria-roledescription="Karussell" aria-label="Bilder Feel Good Day">
+        <div class="carousel-wrap">
+          <button class="carousel-nav carousel-prev" type="button" aria-label="Vorheriges Bild">&#8249;</button>
+          <ul class="carousel-track" tabindex="0">
+          <li class="slide"><img src="images/Mandala/049F7342-E4CC-48FC-B6EB-548E12CE3287.jpeg" alt="Feel Good Day Bild 1" loading="lazy" onclick="openFullSize(this.src)"></li>
+          <li class="slide"><img src="images/Mandala/0C8B5344-ECFC-43C0-BEDA-E31E4D15A6DB.jpeg" alt="Feel Good Day Bild 2" loading="lazy" onclick="openFullSize(this.src)"></li>
+          <li class="slide"><img src="images/Mandala/68339C86-E98C-4217-B2F4-4FC5C9A7224A.jpeg" alt="Feel Good Day Bild 3" loading="lazy" onclick="openFullSize(this.src)"></li>
+          <li class="slide"><img src="images/Mandala/8D3F074B-1C69-439D-B237-42A18EADBA9B.jpeg" alt="Feel Good Day Bild 4" loading="lazy" onclick="openFullSize(this.src)"></li>
+          <li class="slide"><img src="images/Mandala/C5887DC3-8D86-4B11-9586-692D6B98E179.jpeg" alt="Feel Good Day Bild 5" loading="lazy" onclick="openFullSize(this.src)"></li>
+          <li class="slide"><img src="images/Mandala/E14DD2E2-2D86-4F0E-AE68-D78FE9E168D2.jpeg" alt="Feel Good Day Bild 6" loading="lazy" onclick="openFullSize(this.src)"></li>
           </ul>
           <button class="carousel-nav carousel-next" type="button" aria-label="Nächstes Bild">&#8250;</button>
         </div>
@@ -57,58 +124,45 @@
       </section>
     </div>
   </section>
-  <section class="workshop">
+  <section class="workshop" id="alpaka-yoga">
     <section class="hero hero--full">
-      <img src="images/fotoshooting/foto06.jpg" alt="Release and Reconnect" class="hero-photo" />
-      <h2>Release and Reconnect</h2>
+      <img src="images/alpaka-yoga.jpeg" alt="Alpakawanderung am See" class="hero-photo" />
+      <h2>Alpaka Yoga</h2>
     </section>
     <div class="container">
       <div class="kurse-card">
-        <p>Das ist ein Beispieltext für den Workshop „Release and Reconnect". Hier folgt später eine Beschreibung mit Inhalten, Ablauf und Zielgruppe.</p>
-        <p><strong>Termin:</strong> folgt<br><strong>Ort:</strong> folgt<br><strong>Kosten:</strong> folgt</p>
+        <h3 class="section-title">Alpaka Yoga</h3>
+        <p>In Zusammenarbeit mit der <a href="https://alpakasoelde.at">Alpakasölde</a>.</p>
+        <p>Freu dich auf Meditation und Yoga mit Sophie, einen Alpakaspaziergang und einen gemütlichen Ausklang mit der Möglichkeit, selbst Wolle zu filzen.</p>
+        <p><strong>Termin:</strong> folgt<br><strong>Ort:</strong> Alpakasölde, Frauenstein 12</p>
       </div>
-      <section class="carousel carousel--portrait" aria-roledescription="Karussell" aria-label="Bilder Release and Reconnect">
-        <div class="carousel-wrap">
-          <button class="carousel-nav carousel-prev" type="button" aria-label="Vorheriges Bild">&#8249;</button>
-          <ul class="carousel-track" tabindex="0">
-          <li class="slide"><img src="images/fotoshooting/foto06.jpg" alt="Release and Reconnect Bild 1" loading="lazy" onclick="openFullSize(this.src)"></li>
-          <li class="slide"><img src="images/fotoshooting/foto06.jpg" alt="Release and Reconnect Bild 2" loading="lazy" onclick="openFullSize(this.src)"></li>
-          <li class="slide"><img src="images/fotoshooting/foto06.jpg" alt="Release and Reconnect Bild 3" loading="lazy" onclick="openFullSize(this.src)"></li>
-          </ul>
-          <button class="carousel-nav carousel-next" type="button" aria-label="Nächstes Bild">&#8250;</button>
-        </div>
-        <div class="carousel-dots">
-        <button class="carousel-dot" type="button" aria-label="Zu Bild 1"></button>
-        <button class="carousel-dot" type="button" aria-label="Zu Bild 2"></button>
-        <button class="carousel-dot" type="button" aria-label="Zu Bild 3"></button>
-        </div>
-      </section>
     </div>
   </section>
-  <section class="workshop">
+  <section class="workshop" id="yoga-und-genuss">
     <section class="hero hero--full">
-      <img src="images/fotoshooting/foto06.jpg" alt="Yoga und Clay" class="hero-photo" />
-      <h2>Yoga und Clay</h2>
+      <img src="images/genuss-header.jpeg" alt="Süße Snacks bei Yoga und Genuss" class="hero-photo" />
+      <h2>Yoga und Genuss</h2>
     </section>
     <div class="container">
       <div class="kurse-card">
-        <p>Das ist ein Beispieltext für den Workshop „Yoga und Clay". Hier folgt später eine Beschreibung mit Inhalten, Ablauf und Zielgruppe.</p>
-        <p><strong>Termin:</strong> folgt<br><strong>Ort:</strong> folgt<br><strong>Kosten:</strong> folgt</p>
+        <h3 class="section-title">Yoga und Genuss</h3>
+        <p>In Zusammenarbeit mit <a href="https://www.dasludwig.co.at/">Das Ludwig</a>.</p>
+        <p>Wir fließen durch eine wohltuende Yogapraxis und genießen anschließend sommerliche, gesunde Snacks im „Das Ludwig“.</p>
+        <p>Nach einer 60-minütigen Yogaeinheit mit Sophie im Stadtpark Ried erwarten dich gesunde, genussvolle vegetarische Speisen und Getränke im „Das Ludwig“.</p>
+        <p><strong>Termin:</strong> folgt<br><strong>Ort:</strong> Ried im Innkreis</p>
       </div>
-      <section class="carousel carousel--portrait" aria-roledescription="Karussell" aria-label="Bilder Yoga und Clay">
+      <section class="carousel" aria-roledescription="Karussell" aria-label="Bilder Yoga und Genuss">
         <div class="carousel-wrap">
           <button class="carousel-nav carousel-prev" type="button" aria-label="Vorheriges Bild">&#8249;</button>
           <ul class="carousel-track" tabindex="0">
-          <li class="slide"><img src="images/fotoshooting/foto06.jpg" alt="Yoga und Clay Bild 1" loading="lazy" onclick="openFullSize(this.src)"></li>
-          <li class="slide"><img src="images/fotoshooting/foto06.jpg" alt="Yoga und Clay Bild 2" loading="lazy" onclick="openFullSize(this.src)"></li>
-          <li class="slide"><img src="images/fotoshooting/foto06.jpg" alt="Yoga und Clay Bild 3" loading="lazy" onclick="openFullSize(this.src)"></li>
+          <li class="slide"><img src="images/genuss/28D493F0-9F35-481A-B8AC-1E08A7D29BC2.jpeg" alt="Vegetarische Speisen bei Yoga und Genuss" loading="lazy" onclick="openFullSize(this.src)"></li>
+          <li class="slide"><img src="images/genuss/2BF49502-4247-4E0E-A815-84F6B5BAB310.jpeg" alt="Yogaeinheit bei Yoga und Genuss" loading="lazy" onclick="openFullSize(this.src)"></li>
           </ul>
           <button class="carousel-nav carousel-next" type="button" aria-label="Nächstes Bild">&#8250;</button>
         </div>
         <div class="carousel-dots">
-        <button class="carousel-dot" type="button" aria-label="Zu Bild 1"></button>
-        <button class="carousel-dot" type="button" aria-label="Zu Bild 2"></button>
-        <button class="carousel-dot" type="button" aria-label="Zu Bild 3"></button>
+          <button class="carousel-dot" type="button" aria-label="Zu Bild 1"></button>
+          <button class="carousel-dot" type="button" aria-label="Zu Bild 2"></button>
         </div>
       </section>
     </div>
@@ -122,56 +176,6 @@
       <a href="impressum.html">Impressum</a> &nbsp;|&nbsp; <a href="datenschutz.html">Datenschutz</a>
     </div>
   </footer>
-  <style>
-    html, body {
-      height: 100%;
-    }
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      padding-bottom: 0;
-    }
-    .container {
-      flex: 1 0 auto;
-    }
-    .site-footer {
-      width: 100vw;
-      background: linear-gradient(90deg, #e6ecdf 60%, #fbf7ed 100%);
-      border-top: 2px solid #e3dcc4;
-      margin-top: 3rem;
-      padding: 2.2rem 0 1.2rem 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 80px;
-      box-sizing: border-box;
-    }
-    .footer-content {
-      font-size: 1.08rem;
-      color: #4b5b73;
-      letter-spacing: 0.01em;
-      text-align: center;
-    }
-    .footer-content a {
-      color: #e1b14a;
-      text-decoration: underline;
-      transition: color 0.2s;
-    }
-    .footer-content a:hover {
-      color: #c99a2e;
-    }
-    @media (max-width: 600px) {
-      .site-footer {
-        padding: 1.2rem 0 0.7rem 0;
-        min-height: 60px;
-      }
-      .footer-content {
-        font-size: 0.98rem;
-      }
-    }
-  </style>
   <script src="carousel.js"></script>
   <script>
     (function () {
@@ -189,7 +193,8 @@
     }
     function toggleMenu() {
       const nav = document.querySelector('nav');
-      nav.classList.toggle('show');
+      const open = nav.classList.toggle('show');
+      document.querySelector('.menu-toggle').setAttribute('aria-expanded', String(open));
     }
   </script>
 </body>
